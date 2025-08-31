@@ -387,12 +387,12 @@ const HuntingWebsite = () => {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <img
-                    src="/images/img9.jpg"
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format"
                     alt="Hunting guide"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                   <img
-                    src="/images/img7.jpg"
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format"
                     alt="Hunting landscape"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover mt-8 transform hover:scale-105 transition-transform duration-300"
                   />
