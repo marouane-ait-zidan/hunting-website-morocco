@@ -87,7 +87,7 @@ const HuntingWebsite = () => {
   const animals = [
     {
       name: "Caille",
-      imgUrl: "/IGHIL/images/caille.jpg",
+      imgUrl: "/images/caille.jpg",
       type: "Migrateur",
       period: "début octobre jusqu'à fin février",
       description: "Petit gibier très apprécié des chasseurs pour sa rapidité et son vol imprévisible.",
@@ -95,7 +95,7 @@ const HuntingWebsite = () => {
     },
     {
       name: "Bécassine",
-      imgUrl: "/IGHIL/images/Bécassine.jpg",
+      imgUrl: "/images/Bécassine.jpg",
       type: "Migrateur",
       period: "début octobre jusqu'à fin février",
       description: "Échassier des marais, challenge technique pour les chasseurs expérimentés.",
@@ -103,7 +103,7 @@ const HuntingWebsite = () => {
     },
     {
       name: "Grive",
-      imgUrl: "/IGHIL/images/grive.webp",
+      imgUrl: "/images/grive.webp",
       type: "Migrateur",
       period: "début octobre jusqu'à fin février",
       description: "Oiseau migrateur offrant une chasse traditionnelle dans les oliveraies.",
@@ -111,7 +111,7 @@ const HuntingWebsite = () => {
     },
     {
       name: "Sanglier",
-      imgUrl: "/IGHIL/images/sanglier.jpg",
+      imgUrl: "/images/sanglier.jpg",
       type: "Sédentaire",
       period: "début octobre à fin avril",
       description: "Grand gibier emblématique, chasse en battue dans les forêts de chênes-lièges.",
@@ -119,7 +119,7 @@ const HuntingWebsite = () => {
     },
     {
       name: "Tourterelle",
-      imgUrl: "/IGHIL/images/tourterelle.jpg",
+      imgUrl: "/images/tourterelle.jpg",
       type: "Migrateur",
       period: "mi-juillet à début septembre",
       description: "Colombe sauvage, vol rapide et direct, chasse au passage.",
@@ -127,7 +127,7 @@ const HuntingWebsite = () => {
     },
     {
       name: "Perdrix gambra",
-      imgUrl: "/IGHIL/images/Perdrix Gambra.jpg",
+      imgUrl: "/images/Perdrix Gambra.jpg",
       type: "Sédentaire",
       period: "du 1er octobre à fin mars",
       description: "Perdrix africaine endémique, gallinacé robuste des terrains rocailleux.",
@@ -387,12 +387,12 @@ const HuntingWebsite = () => {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <img
-                    src="/IGHIL/images/img9.jpg"
+                    src="/images/img9.jpg"
                     alt="Hunting guide"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                   <img
-                    src="/IGHIL/images/img7.jpg"
+                    src="/images/img7.jpg"
                     alt="Hunting landscape"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover mt-8 transform hover:scale-105 transition-transform duration-300"
                   />
@@ -607,7 +607,7 @@ const HuntingWebsite = () => {
               
               <div className="relative bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 shadow-2xl">
                 <img
-                  src="/IGHIL/images/TL_CHASSE_map.svg"
+                  src="/images/TL_CHASSE_map.svg"
                   alt="Morocco map"
                   className="w-full max-w-4xl mx-auto h-96 object-contain opacity-20"
                 />
@@ -649,7 +649,7 @@ const HuntingWebsite = () => {
               <div className="relative w-full flex items-center justify-center min-h-[400px]">
                 {/* SVG MAP */}
                 <img
-                  src="/IGHIL/images/TL_CHASSE_map.svg"
+                  src="/images/TL_CHASSE_map.svg"
                   alt="Morocco map"
                   className="block mx-auto w-full max-w-3xl h-[400px] md:h-[500px] object-contain select-none"
                   draggable={false}
@@ -681,14 +681,14 @@ const HuntingWebsite = () => {
             {/* Masonry Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                { src: '/IGHIL/images/img9.jpeg', size: 'tall' },
-                { src: '/IGHIL/images/img1.jpeg', size: 'normal' },
-                { src: '/IGHIL/images/img2.jpeg', size: 'wide' },
-                { src: '/IGHIL/images/img3.jpeg', size: 'normal' },
-                { src: '/IGHIL/images/img11.jpeg', size: 'tall' },
-                { src: '/IGHIL/images/img14.jpeg', size: 'normal' },
-                { src: '/IGHIL/images/img10.jpeg', size: 'normal' },
-                { src: '/IGHIL/images/img4.jpeg', size: 'wide' }
+                { src: '/images/img9.jpeg', size: 'tall' },
+                { src: '/images/img1.jpeg', size: 'normal' },
+                { src: '/images/img2.jpeg', size: 'wide' },
+                { src: '/images/img3.jpeg', size: 'normal' },
+                { src: '/images/img11.jpeg', size: 'tall' },
+                { src: '/images/img14.jpeg', size: 'normal' },
+                { src: '/images/img10.jpeg', size: 'normal' },
+                { src: '/images/img4.jpeg', size: 'wide' }
               ].map((image, index) => (
                 <div
                   key={index}
@@ -734,21 +734,21 @@ const HuntingWebsite = () => {
                 {
                   title: "Saison de chasse 2025",
                   desc: "Découvrez notre nouvelle saison avec des territoires exclusifs et des forfaits adaptés à tous les niveaux de chasseurs.",
-                  image: "/IGHIL/images/img2.jpeg",
+                  image: "/images/img2.jpeg",
                   date: "Mars 2025",
                   category: "Actualités"
                 },
                 {
                   title: "Guides expérimentés",
                   desc: "Nos guides locaux certifiés vous accompagnent pour une expérience authentique en toute sécurité.",
-                  image: "/IGHIL/images/img5.jpeg",
+                  image: "/images/img5.jpeg",
                   date: "Service permanent",
                   category: "Services"
                 },
                 {
                   title: "Hébergement premium",
                   desc: "Profitez de notre lodge confortable au cœur de la nature avec tous les équipements modernes.",
-                  image: "/IGHIL/images/img14.jpeg",
+                  image: "/images/img14.jpeg",
                   date: "Disponible",
                   category: "Hébergement"
                 }
