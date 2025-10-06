@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Facebook, Instagram, MessageCircle, Mail, MapPin, Phone, Globe, Target, Award, Users, Calendar } from 'lucide-react';
+import CircularText from './components/CircularText' ; 
 
 const HuntingWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,6 +8,7 @@ const HuntingWebsite = () => {
   const [email, setEmail] = useState('');
   const [hoveredAnimal, setHoveredAnimal] = useState(null);
   const [scrollY, setScrollY] = useState(0);
+  const [hovered, setHovered] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -385,12 +387,12 @@ const HuntingWebsite = () => {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <img
-                    src="https://images.unsplash.com/photo-1574952793354-ad4b0f2cf8d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="/images/img9.jpg"
                     alt="Hunting guide"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                   <img
-                    src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="/images/img7.jpg"
                     alt="Hunting landscape"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover mt-8 transform hover:scale-105 transition-transform duration-300"
                   />
@@ -402,11 +404,25 @@ const HuntingWebsite = () => {
         </div>
       </section>
 
+      {/* Circular Text Section - Add this after the About section */}
+<section className="py-20 bg-black">
+  <div className="container mx-auto px-4">
+    <div className="flex justify-center items-center">
+      <CircularText 
+        text="IGHIL CO • HUNTING EXPERIENCE • "
+        spinDuration={25}
+        onHover="speedUp"
+        className="w-[250px] h-[250px] text-orange-500"
+      />
+    </div>
+  </div>
+</section>
+
       {/* Animals/Hunts Section */}
-      <section id="hunts" className="py-24 bg-white">
+      {/* <section id="hunts" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {/* Section Header */}
+            
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">
                 SÉJOUR <span className="text-orange-500">DE CHASSE</span>
@@ -418,7 +434,7 @@ const HuntingWebsite = () => {
               </p>
             </div>
 
-            {/* Animals Grid */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {animals.map((animal, index) => (
                 <div
@@ -427,7 +443,7 @@ const HuntingWebsite = () => {
                   onMouseEnter={() => setHoveredAnimal(index)}
                   onMouseLeave={() => setHoveredAnimal(null)}
                 >
-                  {/* Image Container */}
+
                   <div className="relative h-64 overflow-hidden">
                     <img
                       src={animal.imgUrl}
@@ -436,7 +452,7 @@ const HuntingWebsite = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     
-                    {/* Crosshair Effect */}
+
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="relative">
                         <div className="w-16 h-16 border-2 border-orange-400 rounded-full"></div>
@@ -445,7 +461,7 @@ const HuntingWebsite = () => {
                       </div>
                     </div>
 
-                    {/* Type Badge */}
+
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         animal.type === 'Migrateur' 
@@ -457,13 +473,13 @@ const HuntingWebsite = () => {
                     </div>
                   </div>
 
-                  {/* Content */}
+                  
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">{animal.name}</h3>
                     <p className="text-orange-600 font-semibold mb-3">{animal.period}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{animal.description}</p>
                     
-                    {/* Hover Details */}
+                  
                     <div className={`mt-4 transition-all duration-300 ${
                       hoveredAnimal === index ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'
                     } overflow-hidden`}>
@@ -476,7 +492,7 @@ const HuntingWebsite = () => {
               ))}
             </div>
 
-            {/* CTA */}
+            
             <div className="text-center">
               <a
                 href="https://forms.gle/NfXy36NKjj8M1RPY6"
@@ -489,11 +505,91 @@ const HuntingWebsite = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section id="hunts" className="py-16 bg-white">
+  <div className="max-w-4xl mx-auto px-2">
+    <div className="text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold uppercase">
+        SÉJOUR <span className="text-orange-500">DE CHASSE</span>
+      </h2>
+      <div className="my-4 flex justify-center">
+        {/* SVG Separator */}
+        <svg width="50" height="50" viewBox="0 0 129 129">
+          <g>
+            <path
+              d="m10.7,68.6h9c1.9,21.6 19.2,38.8 40.7,40.7v9c0,2.2 1.8,4.1 4.1,4.1 2.2,0 4.1-1.8 4.1-4.1v-9c21.6-1.9 38.8-19.2 40.7-40.7h9c2.2,0 4.1-1.8 4.1-4.1 0-2.2-1.8-4.1-4.1-4.1h-9c-1.9-21.6-19.2-38.8-40.7-40.7v-9c0-2.2-1.8-4.1-4.1-4.1-2.2,0-4.1,1.8-4.1,4.1v9c-21.6,1.9-38.8,19.2-40.7,40.7h-9c-2.3,0-4.1,1.8-4.1,4.1 3.55271e-15,2.3 1.9,4.1 4.1,4.1zm33.7-8.2h-16.5c1.9-17.1 15.5-30.7 32.5-32.5v16.5c0,2.2 1.8,4.1 4.1,4.1 2.2,0 4.1-1.8 4.1-4.1v-16.5c17.1,1.9 30.7,15.5 32.5,32.5h-16.5c-2.2,0-4.1,1.8-4.1,4.1 0,2.2 1.8,4.1 4.1,4.1h16.5c-1.9,17.1-15.5,30.7-32.5,32.5v-16.5c0-2.2-1.8-4.1-4.1-4.1-2.2,0-4.1,1.8-4.1,4.1v16.5c-17.1-1.9-30.7-15.5-32.5-32.5h16.5c2.2,0 4.1-1.8 4.1-4.1 0-2.2-1.9-4.1-4.1-4.1z"
+              fill="#ff7f00"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <p className="text-gray-600 text-base md:text-lg">
+        T.L. Chasse vous offre un cadre de chasse agréable au Maroc avec un gibier sauvage naturellement
+        sélectionné de type sédentaire et migrateur (Caille, Bécassine, perdrix gambra, sangliers à la grive)
+        dans plusieurs zones du territoire national
+      </p>
+    </div>
+
+    <section className="py-10 bg-[#f7f7f7]">
+      <div className="flex flex-wrap justify-center gap-x-16 gap-y-8">
+        {animals.map((animal, idx) => (
+          <div key={animal.name} className="flex flex-col items-center">
+            <div
+              className="relative w-[220px] h-[220px] rounded-full border-4 border-orange-500 shadow-lg overflow-visible group transition-shadow duration-200 bg-white flex items-center justify-center"
+              onMouseEnter={() => setHovered(idx)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {/* Animal Image */}
+              <img
+                src={animal.imgUrl}
+                alt={animal.name}
+                className="w-full h-full object-cover rounded-full"
+                draggable={false}
+              />
+              {/* Crosshair: always visible */}
+              <span className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-8 w-1 bg-orange-500 z-20" />
+              <span className="pointer-events-none absolute left-1/2 bottom-0 -translate-x-1/2 h-8 w-1 bg-orange-500 z-20" />
+              <span className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 w-8 h-1 bg-orange-500 z-20" />
+              <span className="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 w-8 h-1 bg-orange-500 z-20" />
+              {/* Overlay: smaller orange circle, only on hover */}
+              {hovered === idx && (
+                <div className="absolute left-1/2 top-1/2 w-[180px] h-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/80 flex flex-col items-center justify-center text-center z-30">
+                  <span className="text-white text-2xl font-extrabold uppercase mb-2">{animal.name}</span>
+                  <span className="text-white text-base font-medium">Type de gibier: {animal.type}</span>
+                </div>
+              )}
+            </div>
+            <span className="block mt-3 text-xl font-semibold text-orange-500 text-center">{animal.name}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div className="text-center mt-12">
+      <a
+        href="https://forms.gle/NfXy36NKjj8M1RPY6"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: "#fff",
+          fontSize: "15px",
+          borderRadius: "4px",
+          background: "#ff7f00",
+          padding: "14px 18px",
+          marginTop: "30px",
+          display: "inline-block",
+        }}
+      >
+        Demander un devis
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Hunting Zones */}
-      <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800 text-white relative overflow-hidden">
-        {/* Background Pattern */}
+      {/* <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800 text-white relative overflow-hidden">
+        
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -508,7 +604,7 @@ const HuntingWebsite = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto mb-16"></div>
             
             <div className="relative">
-              {/* Map Container */}
+              
               <div className="relative bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 shadow-2xl">
                 <img
                   src="/images/TL_CHASSE_map.svg"
@@ -516,7 +612,7 @@ const HuntingWebsite = () => {
                   className="w-full max-w-4xl mx-auto h-96 object-contain opacity-20"
                 />
                 
-                {/* Overlay Content */}
+
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <div className="mb-6">
@@ -525,7 +621,7 @@ const HuntingWebsite = () => {
                     <h3 className="text-4xl font-bold mb-4">Maroc</h3>
                     <p className="text-xl text-orange-200 mb-8">Territoires de chasse authentiques</p>
                     
-                    {/* Zone Features */}
+                  
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-8">
                       {[
                         { title: "Atlas Mountains", desc: "Zones montagneuses pour sangliers" },
@@ -544,7 +640,33 @@ const HuntingWebsite = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="py-24 bg-[#283349] text-white relative overflow-hidden">
+            <div className="max-w-5xl mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 uppercase tracking-wide">
+                {t.huntingZones}
+              </h2>
+              <div className="relative w-full flex items-center justify-center min-h-[400px]">
+                {/* SVG MAP */}
+                <img
+                  src="/images/TL_CHASSE_map.svg"
+                  alt="Morocco map"
+                  className="block mx-auto w-full max-w-3xl h-[400px] md:h-[500px] object-contain select-none"
+                  draggable={false}
+                  style={{ filter: "brightness(0.15)" }}
+                />
+                {/* Centered Pin+Text overlay */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20">
+                  <MapPin className="w-16 h-16 text-[#fd8900]" strokeWidth={3} />
+                  <div className="mt-3 text-3xl font-bold">Maroc</div>
+                  <div className="mt-2 text-lg opacity-90 font-light">
+                    Territoires de chasse authentiques
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      
 
       {/* Gallery Section */}
       <section id="gallery" className="py-24 bg-gray-50">
@@ -559,14 +681,14 @@ const HuntingWebsite = () => {
             {/* Masonry Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                { src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'tall' },
-                { src: 'https://images.unsplash.com/photo-1574952793354-ad4b0f2cf8d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'normal' },
-                { src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'wide' },
-                { src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'normal' },
-                { src: 'https://images.unsplash.com/photo-1574952793354-ad4b0f2cf8d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'tall' },
-                { src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'normal' },
-                { src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'normal' },
-                { src: 'https://images.unsplash.com/photo-1574952793354-ad4b0f2cf8d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80', size: 'wide' }
+                { src: '/images/img9.jpeg', size: 'tall' },
+                { src: '/images/img1.jpeg', size: 'normal' },
+                { src: '/images/img2.jpeg', size: 'wide' },
+                { src: '/images/img3.jpeg', size: 'normal' },
+                { src: '/images/img11.jpeg', size: 'tall' },
+                { src: '/images/img14.jpeg', size: 'normal' },
+                { src: '/images/img10.jpeg', size: 'normal' },
+                { src: '/images/img4.jpeg', size: 'wide' }
               ].map((image, index) => (
                 <div
                   key={index}
@@ -612,21 +734,21 @@ const HuntingWebsite = () => {
                 {
                   title: "Saison de chasse 2025",
                   desc: "Découvrez notre nouvelle saison avec des territoires exclusifs et des forfaits adaptés à tous les niveaux de chasseurs.",
-                  image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                  image: "/images/img2.jpeg",
                   date: "Mars 2025",
                   category: "Actualités"
                 },
                 {
                   title: "Guides expérimentés",
                   desc: "Nos guides locaux certifiés vous accompagnent pour une expérience authentique en toute sécurité.",
-                  image: "https://images.unsplash.com/photo-1574952793354-ad4b0f2cf8d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                  image: "/images/img5.jpeg",
                   date: "Service permanent",
                   category: "Services"
                 },
                 {
                   title: "Hébergement premium",
                   desc: "Profitez de notre lodge confortable au cœur de la nature avec tous les équipements modernes.",
-                  image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                  image: "/images/img14.jpeg",
                   date: "Disponible",
                   category: "Hébergement"
                 }
